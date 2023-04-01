@@ -1,17 +1,14 @@
 plugins {
     id 'java'
+    id 'application'
 }
-
-group 'mjc-school'
-version '1.0'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation 'com.mjcschool:my-project:1.0'
-    implementation project(path: ':utils')
+    implementation project(':utils')
 }
 
 test {

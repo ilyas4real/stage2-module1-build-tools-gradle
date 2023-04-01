@@ -8,16 +8,15 @@ java {
 }
 
 repositories {
-    mavenLocal()
     mavenCentral()
 }
 
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'com.mjcschool'
-            artifactId = 'my-project'
-            version = '1.0'
+            groupId = 'com.epam.utils'
+            artifactId = project.name
+            version = project.version
 
             from components.java
         }
@@ -32,8 +31,8 @@ dependencies {
 jar {
     manifest {
         attributes(
-        'Implementation-Title': 'My Project',
-        'Implementation-Version': 1.0)
+        'Implementation-Title': project.name,
+        'Implementation-Version': project.version)
     }
 }
 
